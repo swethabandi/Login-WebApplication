@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,6 +21,13 @@ public class Login_Servlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String username=request.getParameter("u1");
+		String password=request.getParameter("p1");
+		
+		 
+		
 	}
 
 	/**
